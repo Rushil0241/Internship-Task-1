@@ -1,0 +1,45 @@
+IP Addresses 
+
+1) 10.0.2.2
+
+135/tcp  open  msrpc 
+Vulnerable to buffer overflow and DoS attacks if unpatched.
+Exploited in the past (e.g., Blaster worm, CVE-2003-0352).
+Can be used in information gathering (e.genumerating services or users)
+
+445/tcp  open  microsoft-ds
+Extremely high-risk if exposed to the internet.
+Target of many exploits, including:
+EternalBlue (used in WannaCry ransomware)
+SMBRelay, SMBGhost (CVE-2020-0796)
+Can leak sensitive information (hostnames, shares, users).
+Vulnerable to MITM attacks and remote code execution if misconfigured.
+
+
+9010/tcp open  sdr
+This is not a well-known standardized port.Unknown services on uncommon ports are often a red flag.
+Could allow remote access or be a backdoor.
+May expose APIs or control interfaces without authentication.
+
+2) 10.0.2.3
+
+53/tcp open  domain
+Port 53 is used for DNS (Domain Name System).
+Typically runs over UDP for standard queries.
+Here are the common risks if TCP 53 is open to untrusted networks:
+DNS Zone Transfers – Can leak internal domain/host info if not restricted.
+DDoS Amplification Attacks – Misconfigured DNS can be used in reflection attacks.
+Information Disclosure – May expose internal IPs, hostnames, or server version.
+DNS Cache Poisoning – Attackers could inject fake DNS records.
+DNS Tunneling – Attackers can exfiltrate data or run C2 channels via DNS.
+Unintended DNS Exposure – Server might be unintentionally accessible to the internet.
+Service Misuse – Unauthorized users might exploit it for unauthorized queries or attacks.
+
+
+
+3) 10.0.2.15
+All 1000 scanned ports on 10.0.2.15 are in ignored states.
+
+
+
+No common service were found running on those ports.
